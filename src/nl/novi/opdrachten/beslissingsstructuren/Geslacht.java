@@ -19,6 +19,22 @@ public class Geslacht {
         Bonus: Lukt het je om de code zo te maken dat hoofdletters genegeerd worden?
          */
 
-    }
+        /* BvS
+        ==tests for reference equality (whether they are the same object).
+        .equals()tests for value equality (whether they are logically "equal").
+        Geplakt uit <https://stackoverflow.com/questions/513832/how-do-i-compare-strings-in-java>
+         */
 
+        if (geslacht.toLowerCase().equals("man")) {
+            System.out.println("Dag meneer");
+        }
+        else {
+            if (geslacht.toLowerCase().equals("vrouw")) {
+                System.out.println("Dag mevrouw");
+            }
+            else {
+                System.out.println("Dag persoon");
+            }
+        }
+    }
 }

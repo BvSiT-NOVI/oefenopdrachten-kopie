@@ -31,5 +31,52 @@ public class Hoofdletters {
         curstomerNames.add("henk den hartog");
         curstomerNames.add("mo el-mecky");
         curstomerNames.add("fredje kadetje");
+
+        printList(capitalizeNames(curstomerNames));
     }
+
+    private static List<String> capitalizeNames(List<String> list){
+        for(String s:list){
+            list.set(list.indexOf(s),capitalizeName2(s));
+        }
+        return list;
+    }
+
+    private static String capitalizeName(String s){
+        String[] words=s.split(" ");
+        for (int i=0;i<words.length;i++){
+            words[i]= words[i].substring(0, 1).toUpperCase() + words[i].substring(1);
+        }
+        return String.join(" ",words);
+    }
+
+    private static String capitalizeName2(String s){
+        String[] words=s.split(" ");
+        //Capitalize first word
+        words[0]= words[0].substring(0, 1).toUpperCase() + words[0].substring(1);
+        words[0]=capitalizeAfterHyphen(words[0]);
+        int len = words.length;
+        //Capitalize last word
+        if (len>1) {
+            words[len-1]= words[len-1].substring(0, 1).toUpperCase() + words[len-1].substring(1);
+            words[len-1]=capitalizeAfterHyphen(words[len-1]);
+        }
+
+        return String.join(" ",words);
+    }
+
+    private static String capitalizeAfterHyphen(String s){
+        String[] words=s.split("-");
+        for (int i=0;i<words.length;i++){
+            if (i>0) words[i]= words[i].substring(0, 1).toUpperCase() + words[i].substring(1);
+        }
+        return String.join("-",words);
+    }
+
+    private static void printList(List<String> list) {
+        for( String s:list  ){
+            System.out.println(s);
+        }
+    }
+
 }

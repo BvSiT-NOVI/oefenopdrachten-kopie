@@ -11,5 +11,22 @@ public class DeelbaarDoorVijf {
 
     public static void main(String[] sammieKijkOmhoog) {
         int chosenNumber = 44;
+        divisibleByFive(chosenNumber);
+
+        chosenNumber = 35;
+        divisibleByFive(chosenNumber);
+
     }
+
+    private static void divisibleByFive(int x){
+        String out ="%d is %sdivisible by 5";
+        if (x % 5 == 0) {
+            out = String.format(out,x,"");
+        }
+        else {
+            out = String.format(out,x,"in");
+        }
+        System.out.println(out);
+    }
+
 }
