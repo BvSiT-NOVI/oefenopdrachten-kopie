@@ -61,7 +61,7 @@ public class Korting {
             price = aankoopBedrag - (aankoopBedrag*discount/100);
         }
 
-        System.out.printf(result,textDiscount,status, prices);
+        System.out.printf(result,textDiscount,status, price);
 
     }
 }
