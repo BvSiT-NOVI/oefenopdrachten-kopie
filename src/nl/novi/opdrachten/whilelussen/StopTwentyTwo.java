@@ -11,6 +11,7 @@ public class StopTwentyTwo {
         while(teller < 100) { // Deze regel mag niet aangepast worden.
             System.out.println("Getal: " + teller);
             teller = teller + 1;
+            if (teller>22) break;
         }
     }
 }

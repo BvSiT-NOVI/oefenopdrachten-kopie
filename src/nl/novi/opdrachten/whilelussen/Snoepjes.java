@@ -13,6 +13,12 @@ public class Snoepjes {
             // Zorg er hier voor dat het aantal snoepjes minder wordt.
 
         }*/
+
+        while(aantalSnoepjes>0){
+            System.out.println("Er zijn nog " + aantalSnoepjes + " snoepjes over. Tijd om er nog een op te eten.");
+            aantalSnoepjes--;
+        }
+
         System.out.println("De snoepjes zijn op.");
     }
 }

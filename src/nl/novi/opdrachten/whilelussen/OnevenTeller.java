@@ -8,5 +8,9 @@ public class OnevenTeller {
         Print alleen de oneven getallen uit!
          */
         int teller = 0;
+        while(teller<=10){
+            if (teller % 2 !=0) System.out.println(teller);
+            teller++;
+        }
     }
 }
