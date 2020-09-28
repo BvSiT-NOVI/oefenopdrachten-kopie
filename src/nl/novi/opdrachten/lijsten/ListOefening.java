@@ -58,6 +58,13 @@ public class ListOefening {
         System.out.println("clubNames after sortAsFirst:");
         printList(sortAsFirst(clubNames,"Ajax"));
 
+        //Vraag 3 raising exception?
+
+        System.out.println("clubNames after sortAsFirstRaisingException:");
+        //printList(sortAsFirstRaisingException(clubNames,"Ajax"));
+
+
+
         // Vraag 4: Kun je hetzelfde doen als hierboven, maar PSV moet dan laatste zijn.
         clubNames.add("Zlotty FC");
         clubNames.add("SC Eindhoven");
@@ -106,6 +113,23 @@ public class ListOefening {
             if (bAdd) outList.add(s);
         }
         return outList;
+    }
+
+    private static List<String> sortAsFirstRaisingException(List<String> list,String nameFirstClub){
+        Collections.sort(list); //Exception occurs also without this line!
+        //BvS: when using directly a for loop on list after sort exception??
+        //#? Best way to prevent https://engineering.saltside.se/collections-sort-java-8-concurrentmodificationexception-73205e3a596
+        //List<String> outList = new ArrayList<>();
+        //boolean bAdd = false;
+        for (String s:list) {
+            if (s.equals(nameFirstClub)) {
+                break;
+            }
+            else {
+                    list.remove(s);
+            }
+        }
+        return list;
     }
 
     private static List<String> sortAsFirst(List<String> list,String nameFirstClub,String nameLastClub) {

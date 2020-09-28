@@ -23,6 +23,8 @@ public class Geslacht {
         ==tests for reference equality (whether they are the same object).
         .equals()tests for value equality (whether they are logically "equal").
         Geplakt uit <https://stackoverflow.com/questions/513832/how-do-i-compare-strings-in-java>
+
+        jjjjjjjjjjjjjjjjjjjj
          */
 
         if (geslacht.toLowerCase().equals("man")) {
